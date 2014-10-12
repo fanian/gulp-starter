@@ -24,7 +24,16 @@ $ npm install -g gulp
 Gulp must be installed globally.
 You may need to use `sudo` to run the install commands as admin.
 
-#### 3. Install npm dependencies:
+#### 3. Install Sass and Compass (if you haven't already)
+
+The `gulp-compass` module relies on [Compass](http://compass-style.org/) already being installed on your system.
+
+```sh
+$ gem install sass
+$ gem install compass --pre
+```
+
+#### 4. Install npm dependencies:
 
 **Important:** Make sure you're in the project directory.
 
@@ -34,10 +43,50 @@ $ npm install
 
 This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory.
 
-#### 4. Run gulp:
+#### 5. Run gulp:
 
 ```sh
 $ gulp
+```
+
+### Directory Structure
+
+```
+gulp-starter/
+|
+|– src/
+|   img/
+|      icons/
+|         ...
+|   js/
+|      lib/
+|         head.js
+|         jquery.js
+|         ...
+|      init.js
+|      common.js
+|   sass/
+|      lib/
+|         _base.sass
+|         _mixins.sass
+|         ...
+|      _reset.sass
+|      _layout.sass
+|      common.sass
+|   *.html
+|
+|– build/
+|   img/
+|      sprite.png
+|   js/
+|      lib/
+|         head.js
+|         jquery.js
+|         ...
+|      common.js
+|   css/
+|      common.css
+|   *.html
 ```
 
 ### License
