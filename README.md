@@ -15,7 +15,8 @@ If you've never used Node.js or `npm` before download and install it from [http:
 $ npm install -g gulp
 ```
 
-Gulp must be installed globally.You may need to use `sudo` to run the install commands as admin.
+Gulp must be installed globally.
+You may need to use `sudo` to run the install commands as admin.
 
 #### 3. Install npm dependencies:
 
