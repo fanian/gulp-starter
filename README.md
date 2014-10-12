@@ -15,7 +15,7 @@ Includes the following tools:
 
 If you've never used Node.js or `npm` before download and install it from [http://nodejs.org/download/](http://nodejs.org/download/).
 
-#### 2. Install gulp.js:
+#### 2. Install gulp.js
 
 ```sh
 $ npm install -g gulp
@@ -33,7 +33,7 @@ $ gem install sass
 $ gem install compass --pre
 ```
 
-#### 4. Install npm dependencies:
+#### 4. Install npm dependencies
 
 **Important:** Make sure you're in the project directory.
 
@@ -43,7 +43,7 @@ $ npm install
 
 This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory.
 
-#### 5. Run gulp:
+#### 5. Run gulp
 
 ```sh
 $ gulp
