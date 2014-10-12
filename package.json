@@ -1,0 +1,17 @@
+{
+
+	"name": "gulp-starter",
+	"version": "0.0.1",
+	"description": "Gulp starter",
+	"author": "Denis Pismenny",
+
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/pismenny/gulp-starter.git"
+	},
+
+	"dependencies": {
+		"gulp": "~3.8.8"
+	}
+
+}
