@@ -6,14 +6,14 @@ dev_path = {
 	html: 'src/*.html',
 	images: 'src/img/**',
 	js: 'src/js/**',
-	sass: 'src/sass/**'
+	sass: 'src/sass/*.sass'
 };
 
 build_path = {
 	html: 'build/',
 	images: 'build/img/',
 	js: 'build/js/',
-	css: 'build/css/'
+	css: 'build/css'
 };
 
 gulp.task('html', function() {
@@ -31,7 +31,7 @@ gulp.task('js', function() {
 		.pipe(gulp.dest(build_path.js));
 });
 
-// Compile our sass with config.rb
+// Compile sass
 gulp.task('compass', function() {
 	gulp.src(dev_path.sass)
 	// Process with compass
@@ -43,7 +43,7 @@ gulp.task('compass', function() {
 	// Run autoprefixer over the resulting css
 	.pipe(autoprefixer())
 	// Write to .css file
-	.pipe( gulp.dest(build_path.css) )
+	.pipe(gulp.dest(build_path.css))
 });
 
 // Watch files for changes

@@ -1,7 +1,7 @@
 {
   "name": "gulp-starter",
   "version": "0.1.0",
-  "description": "Gulp starter boilerplate",
+  "description": "Basic project boilerplate with gulp.js",
   "homepage": "https://github.com/pismenny/gulp-starter",
   "author": {
     "name": "Denis Pismenny",
