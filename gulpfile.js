@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-		compass = require('gulp-compass');
+		compass = require('gulp-compass'),
+		autoprefixer = require('gulp-autoprefixer');
 
 dev_path = {
 	html: 'src/*.html',
@@ -30,16 +31,22 @@ gulp.task('js', function() {
 		.pipe(gulp.dest(build_path.js));
 });
 
+// Compile our sass with config.rb
 gulp.task('compass', function() {
-	gulp.src('./src/sass/**/*.{sass,scss}')
+	gulp.src(dev_path.sass)
+	// Process with compass
 	.pipe(compass({
 		config_file: './config.rb',
 		css: 'build/css',
 		sass: 'src/sass'
 	}))
+	// Run autoprefixer over the resulting css
+	.pipe(autoprefixer())
+	// Write to .css file
+	.pipe( gulp.dest(build_path.css) )
 });
 
-// Отслеживаем изменения в файлах
+// Watch files for changes
 gulp.task('watch', function() {
 	gulp.watch(dev_path.html, ['html']);
 	gulp.watch(dev_path.images, ['images']);
@@ -47,5 +54,5 @@ gulp.task('watch', function() {
 	gulp.watch(dev_path.sass, ['compass']);
 });
 
-// Действия по умолчанию
+// Default task
 gulp.task('default', [ 'watch', 'html', 'images', 'js', 'compass' ]);
