@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git://github.com/pismenny/gulp-starter.git"
   },
+  "licenses": {
+    "type": "MIT",
+    "url": "https://github.com/pismenny/gulp-starter/blob/master/LICENSE.md"
+  },
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",
