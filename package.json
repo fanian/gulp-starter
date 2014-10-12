@@ -12,9 +12,7 @@
     "url": "git://github.com/pismenny/gulp-starter.git"
   },
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-compass": "~1.3.2",
-    "gulp-sass": "~1.1.0",
-    "path": "^0.4.9"
+    "gulp": "~3.8.8",
+    "gulp-compass": "~1.3.2"
   }
 }

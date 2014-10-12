@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
-		compass = require('gulp-compass'),
-		path = require('path');
+		compass = require('gulp-compass');
 
 dev_path = {
   html: 'src/*.html',
@@ -27,18 +26,12 @@ gulp.task('images', function() {
 });
 
 gulp.task('compass', function() {
-	gulp.src('src/sass/**/*.{sass,scss}')
-		.pipe(compass({
-			project: path.join(__dirname, '/'),
-			css: 'build/css',
-			sass: 'src/sass',
-			image: 'src/img',
-			style: 'compact', //The output style for the compiled css. Nested, expanded, compact, or compressed.
-			comments: false,
-			relative: false,
-		}))
-		// .pipe(livereload(server))
-		// .pipe(notify({message: 'Compass task complete'}));
+  gulp.src('./src/sass/**/*.{sass,scss}')
+  .pipe(compass({
+    config_file: './config.rb',
+    css: 'build/css',
+    sass: 'src/sass'
+  }))
 });
 
 // Отслеживаем изменения в файлах
@@ -49,4 +42,4 @@ gulp.task('watch', function() {
 });
 
 // Действия по умолчанию
-gulp.task('default', [ 'watch', 'compass' ]);
+gulp.task('default', [ 'watch', 'html', 'images', 'compass' ]);
