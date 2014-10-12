@@ -49,7 +49,7 @@ This runs through all dependencies listed in `package.json` and downloads them t
 $ gulp
 ```
 
-### Directory Structure
+## Directory Structure
 
 ```
 gulp-starter/
@@ -89,6 +89,6 @@ gulp-starter/
 |   *.html
 ```
 
-### License
+## License
 
 This projected is licensed under the terms of the [MIT license](https://github.com/pismenny/gulp-starter/blob/master/LICENSE.md).
