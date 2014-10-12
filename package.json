@@ -1,17 +1,20 @@
 {
-
-	"name": "gulp-starter",
-	"version": "0.0.1",
-	"description": "Gulp starter",
-	"author": "Denis Pismenny",
-
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/pismenny/gulp-starter.git"
-	},
-
-	"dependencies": {
-		"gulp": "~3.8.8"
-	}
-
+  "name": "gulp-starter",
+  "version": "0.1.0",
+  "description": "Gulp starter boilerplate",
+  "homepage": "https://github.com/pismenny/gulp-starter",
+  "author": {
+    "name": "Denis Pismenny",
+    "email": "pismenny@yandex.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pismenny/gulp-starter.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-compass": "~1.3.2",
+    "gulp-sass": "~1.1.0",
+    "path": "^0.4.9"
+  }
 }
