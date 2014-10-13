@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+		del = require('del'),
 		compass = require('gulp-compass'),
 		autoprefixer = require('gulp-autoprefixer'),
 		include = require('gulp-file-include');
@@ -48,6 +49,14 @@ gulp.task('compass', function() {
 	.pipe(autoprefixer())
 	// Write to .css file
 	.pipe(gulp.dest(build_path.css))
+});
+
+// Clean `build` folder
+gulp.task('clean', function (cb) {
+  del([
+    // here we use a globbing pattern to match everything inside the `build` folder
+    'build',
+  ], cb);
 });
 
 // Watch files for changes
