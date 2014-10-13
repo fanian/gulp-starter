@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
 		compass = require('gulp-compass'),
-		autoprefixer = require('gulp-autoprefixer');
+		autoprefixer = require('gulp-autoprefixer'),
+		include = require('gulp-file-include');
 
 dev_path = {
 	html: 'src/*.html',
+	html_includes: 'src/partials/*.html',
 	images: 'src/img/**',
 	js: 'src/js/**',
 	sass: 'src/sass/*.sass'
@@ -18,6 +20,8 @@ build_path = {
 
 gulp.task('html', function() {
 	return gulp.src(dev_path.html)
+		// File includes
+		.pipe(include())
 		.pipe(gulp.dest(build_path.html));
 });
 
@@ -48,6 +52,7 @@ gulp.task('compass', function() {
 
 // Watch files for changes
 gulp.task('watch', function() {
+	gulp.watch(dev_path.html_includes, ['html']);
 	gulp.watch(dev_path.html, ['html']);
 	gulp.watch(dev_path.images, ['images']);
 	gulp.watch(dev_path.js, ['js']);

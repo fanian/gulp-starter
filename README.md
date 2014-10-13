@@ -8,6 +8,7 @@ Includes the following tools:
 - [Sass](http://sass-lang.com/) (with [Compass](http://compass-style.org/))
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
 - [Head.JS](http://headjs.com/)
+- [File includes](https://www.npmjs.org/package/gulp-file-include) (from npm)
 
 ## Getting Started
 
