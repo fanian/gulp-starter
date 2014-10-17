@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 		del = require('del'),
 		compass = require('gulp-compass'),
 		autoprefixer = require('gulp-autoprefixer'),
+                connect = require('gulp-connect'),
 		include = require('gulp-file-include');
 
 dev_path = {
@@ -21,6 +22,8 @@ build_path = {
 
 gulp.task('html', function() {
 	return gulp.src(dev_path.html)
+	        //live reload with gulp-connect
+                .pipe(connect.reload())
 		// File includes
 		.pipe(include())
 		.pipe(gulp.dest(build_path.html));
@@ -34,6 +37,12 @@ gulp.task('images', function() {
 gulp.task('js', function() {
 	return gulp.src(dev_path.js)
 		.pipe(gulp.dest(build_path.js));
+});    
+
+gulp.task('connect', function() {
+  connect.server({
+   livereload: true
+  });
 });
 
 // Compile sass
@@ -49,6 +58,8 @@ gulp.task('compass', function() {
 	.pipe(autoprefixer())
 	// Write to .css file
 	.pipe(gulp.dest(build_path.css))
+	//Livereload
+        .pipe(connect.reload());
 });
 
 // Clean `build` folder
@@ -69,4 +80,4 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', [ 'watch', 'html', 'images', 'js', 'compass' ]);
+gulp.task('default', [ 'connect','watch', 'html', 'images', 'js', 'compass' ]);
